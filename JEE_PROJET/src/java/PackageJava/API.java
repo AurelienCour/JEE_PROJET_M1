@@ -11,12 +11,33 @@ public class API {
     private int vainqueur;
     private int dernActionValide;
     private String action;
+
+    /**
+     * Constructeur vide de la classe API
+     */
+    public API() {}
+
+    public void setStatut(String statut) {
+        this.statut = statut;
+    }
+
+    public void setVainqueur(int vainqueur) {
+        this.vainqueur = vainqueur;
+    }
+
+    public int getDernActionValide() {
+        return dernActionValide;
+    }
+
+    public void setDernActionValide(int dernActionValide) {
+        this.dernActionValide = dernActionValide;
+    }
     
     /**
      * Function Initialisation
      * Permet d'initialiser les valeurs statuts, vainqueur et la dernière action
      */
-    public void Initialisation(){
+    public void initialisation(){
         statut = "joueur1";
         vainqueur = 0;
         dernActionValide = 0;
