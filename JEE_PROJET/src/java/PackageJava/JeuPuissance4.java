@@ -137,7 +137,7 @@ public class JeuPuissance4 extends API{
         return true;
     }
     
-    public void afficheTableu(){
+    public void afficheTableau(){
         for (int[] is : plateau) {
             for (int i : is) {
                 System.out.print(i+" ");
@@ -189,6 +189,6 @@ public class JeuPuissance4 extends API{
             System.out.println("Le joueur "+vainq+" a gagné !");
         else
             System.out.println("Egalité !!");
-        j.afficheTableu();
+        j.afficheTableau();
     }
 }
