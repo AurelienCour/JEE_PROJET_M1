@@ -15,12 +15,12 @@ import org.junit.Test;
  */
 public class TestAPI {
     
-    private API api;
+    private Jeu api;
     
     @Before
     public void setUp()
     {
-        api = new API();
+        api = new Jeu();
     }
     
     /**
@@ -33,14 +33,15 @@ public class TestAPI {
     
     @Test
     public void testInitialisation(){
-        api.Initialisation();
-        assertEquals("joueur1",api.statut());
+        Jeu.Initialisation();
+        assertEquals("joueur1",Jeu.statut());
+         assertEquals(0,Jeu.derniereAction());
     }
     
     @Test
     public void testTableau(){
-        for (Object object : api.getTab()) {
-            assertEquals(object.getAction(),api.action(object.getJoueur(),object.getCoup()));
+        for (int i = 0; i < Jeu.getTab().length(); i++) {
+            assertEquals(Jeu.getTab()[i][0],api.action(Jeu.getTab()[i][1],Jeu.getTab()[i][2]));
         }
     }
     
