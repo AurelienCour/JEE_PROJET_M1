@@ -62,31 +62,31 @@ public class JeuPuissance4 extends API{
                 if(plateau[i][j] != 0){
                     if(i<=2 && j>3){
                         if(diagGaucheBas(i, j, plateau[i][j], 1)){
-                            this.setStatut("Finie");
+                            this.setStatut("finie");
                             return plateau[i][j];
                         }
                         if(bas(i, j, plateau[i][j], 1)){
-                            this.setStatut("Finie");
+                            this.setStatut("finie");
                             return plateau[i][j];
                         }
                     }
                     else if(i<=2 && j<=3){
                         if(droite(i, j, plateau[i][j],1)){
-                            this.setStatut("Finie");
+                            this.setStatut("finie");
                             return plateau[i][j];
                         }
                         if(diagDroitBas(i, j, plateau[i][j], 1)){
-                            this.setStatut("Finie");
+                            this.setStatut("finie");
                             return plateau[i][j];
                         }
                         if(bas(i, j, plateau[i][j], 1)){
-                            this.setStatut("Finie");
+                            this.setStatut("finie");
                             return plateau[i][j];
                         }
                     }
                     else if(i>2 && j<=3){
                         if(droite(i, j, plateau[i][j], 1)){
-                            this.setStatut("Finie");
+                            this.setStatut("finie");
                             return plateau[i][j];
                         }
                     }
@@ -171,22 +171,33 @@ public class JeuPuissance4 extends API{
         return "";
     }
     
+    String affichage(int joueur) {
+        for (int i = 0; i < 6; i++) {
+            if(plateau[i][this.getDernActionValide()] != 0)
+                return "Joueur : "+joueur+" Le jeton a été place dans la colonne :"+this.getDernActionValide()+" et a la ligne :"+(i+1);
+        } 
+        return "";
+    }
+    
     public static void main (String[] args){
         JeuPuissance4 j = new JeuPuissance4();
-        int joueur;
+        int joueur = 0;
         int nombreAleatoire;
         int vainq = 0;
-        while(j.statut().equals("finie")){
-            nombreAleatoire = 0 + (int)(Math.random() * ((6 - 0) + 1));
+        while(!j.statut().equals("finie")){
+            
+            nombreAleatoire = 0 + (int)(Math.random() * ((7 - 0) + 1));
             if(j.statut().equals("joueur1"))
                 joueur = 1;
-            else
+            else if(j.statut().equals("joueur2"))
                 joueur = 2;
             while(!j.action(joueur, nombreAleatoire)){
-                nombreAleatoire = 0 + (int)(Math.random() * ((6 - 0) + 1));
+                nombreAleatoire = 0 + (int)(Math.random() * ((7 - 0) + 1));
             }
-            System.out.println(j.affichage());
+            System.out.println(j.affichage(joueur));
+            j.afficheTableu();
             vainq = j.vainqueur();
+            
         }
         if(vainq != 0)
             System.out.println("Le joueur "+vainq+" a gagné !");
