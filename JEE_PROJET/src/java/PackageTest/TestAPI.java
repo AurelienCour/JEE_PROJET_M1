@@ -5,6 +5,7 @@
  */
 package PackageTest;
 
+import PackageJava.JeuPuissance4;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,13 +16,14 @@ import org.junit.Test;
  */
 public class TestAPI {
     
-    private Jeu api;
+    private JeuPuissance4 api;
+    private Object[][][] t;
     
     @Before
     public void setUp()
     {
-        api = new Jeu();
-        api.Initialisation();
+        api = new JeuPuissance4();
+        api.initialisation();
     }
     
     /**
@@ -40,7 +42,7 @@ public class TestAPI {
     
     @Test
     public void testMauvaisJoueur(){
-        t   ; //t[1] à 3
+        t =   ; //t[1] à 3
         assertEquals(t[0],api.action(t[1],t[2]));
     }
     

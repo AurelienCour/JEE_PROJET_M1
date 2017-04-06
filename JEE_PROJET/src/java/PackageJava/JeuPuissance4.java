@@ -18,7 +18,7 @@ public class JeuPuissance4 extends API{
     }
 
     @Override
-    void initialisation() {
+    public void initialisation() {
         this.setStatut("joueur1");
         this.setDernActionValide(0);
         plateau = new int[6][7];
