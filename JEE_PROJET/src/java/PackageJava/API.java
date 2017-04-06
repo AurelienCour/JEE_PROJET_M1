@@ -5,7 +5,7 @@ package PackageJava;
  * Classe qui permet d'utiliser les fonctions de l'application
  * @author Paul, Aurélien, Jonathan, Delphine, Claire
  */
-public class API {
+abstract class API {
     
     private String statut;
     private int vainqueur;
