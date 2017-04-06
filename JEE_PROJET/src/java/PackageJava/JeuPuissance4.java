@@ -20,7 +20,7 @@ public class JeuPuissance4 extends API{
     @Override
     public void initialisation() {
         this.setStatut("joueur1");
-        this.setDernActionValide(0);
+        this.setDernActionValide(-1);
         plateau = new int[6][7];
     }
 
@@ -85,6 +85,9 @@ public class JeuPuissance4 extends API{
         return 0;
     }
     
+    public int getJoueurPion(int colonne, int ligne){
+        return plateau[ligne][colonne];
+    }
     
     public int getDerniereLigne(int colonne){
         for (int i = 0; i <= 5; i++) {

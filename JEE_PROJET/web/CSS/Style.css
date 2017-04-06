@@ -97,4 +97,20 @@ text-decoration:none;
         background-repeat: no-repeat; /* pour éviter que l'arrière-plan se répète */
         cursor: pointer; /* au rollover, le curseur est une main, indiquant que le bouton est cliquable */
         background-image:url("../Image/jeton_blanc.png");
-}								
+}
+
+.bouton_puissanceRouge{ 
+        width: 70px; /* largeur de votre image de fond */
+        height: 70px; /* hauteur de votre image de fond */
+        background-repeat: no-repeat; /* pour éviter que l'arrière-plan se répète */
+        cursor: pointer; /* au rollover, le curseur est une main, indiquant que le bouton est cliquable */
+        background-image:url("../Image/jeton_rouge.png");
+}
+
+.bouton_puissanceJaune{ 
+        width: 70px; /* largeur de votre image de fond */
+        height: 70px; /* hauteur de votre image de fond */
+        background-repeat: no-repeat; /* pour éviter que l'arrière-plan se répète */
+        cursor: pointer; /* au rollover, le curseur est une main, indiquant que le bouton est cliquable */
+        background-image:url("../Image/jeton_jaune.png");
+}
