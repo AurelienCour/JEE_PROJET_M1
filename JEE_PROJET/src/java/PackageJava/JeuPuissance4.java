@@ -25,7 +25,7 @@ public class JeuPuissance4 extends API{
     }
 
     @Override
-    boolean action(int numJoueur, int colonne) {
+    public boolean action(int numJoueur, int colonne) {
         if(colonne <= 6 && colonne >= 0){
             for (int i = 5; i >=0; i--) {
                 if(plateau[i][colonne] == 0){
@@ -45,7 +45,7 @@ public class JeuPuissance4 extends API{
     }
 
     @Override
-    int vainqueur() {
+    public int vainqueur() {
         for (int i = 0; i <= 5; i++) {
             for (int j = 0; j <= 6; j++) {
                 if(plateau[i][j] != 0){
@@ -138,7 +138,7 @@ public class JeuPuissance4 extends API{
     }
 
     @Override
-    int derniereAction() {
+    public int derniereAction() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
@@ -152,7 +152,7 @@ public class JeuPuissance4 extends API{
     }
 
     @Override
-    String affichage() {
+    public String affichage() {
         for (int i = 0; i < 6; i++) {
             if(plateau[i][this.getDernActionValide()] != 0)
                 return "Le jeton a été place dans la colonne :"+this.getDernActionValide()+" et a la ligne :"+(i+1);
@@ -160,7 +160,7 @@ public class JeuPuissance4 extends API{
         return "";
     }
     
-    String affichage(int joueur) {
+    public String affichage(int joueur) {
         for (int i = 0; i < 6; i++) {
             if(plateau[i][this.getDernActionValide()] != 0)
                 return "Joueur : "+joueur+" Le jeton a été place dans la colonne :"+(this.getDernActionValide()+1)+" et a la ligne :"+(i+1);

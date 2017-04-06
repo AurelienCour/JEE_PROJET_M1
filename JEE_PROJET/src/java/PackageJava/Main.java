@@ -11,7 +11,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        API application = new API();
+        API application = new JeuPuissance4();
         application.initialisation();
         while (!application.statut().equals("finie")){      // manque le passage de statut à "finie" pour empêcher la boucle infinie
             if (application.action(1, application.derniereAction())){
