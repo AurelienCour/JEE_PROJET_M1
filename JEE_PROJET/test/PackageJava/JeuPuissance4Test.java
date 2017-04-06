@@ -41,7 +41,7 @@ public class JeuPuissance4Test {
     
     @Test
     public void testMauvaisJoueur(){
-        a1 = new Action(true,3,12); //t[1] à 3
+        a1 = new Action(true,3,4); //t[1] à 3
         assertEquals(a1.getB(),api.action(a1.getJoueur(),a1.getCoup()));
     }
 
