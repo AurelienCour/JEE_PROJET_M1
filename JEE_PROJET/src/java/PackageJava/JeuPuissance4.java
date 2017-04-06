@@ -59,7 +59,21 @@ public class JeuPuissance4 extends API{
                             return plateau[i][j];
                         }
                     }
-                    else if(i<=2 && j<=3){
+                    else if(i<=2 && j==3){
+                        if(bas(i, j, plateau[i][j], 1)){
+                            this.setStatut("finie");
+                            return plateau[i][j];
+                        }
+                        if(diagGaucheBas(i, j, plateau[i][j], 1)){
+                            this.setStatut("finie");
+                            return plateau[i][j];
+                        }
+                        if(diagDroitBas(i, j, plateau[i][j], 1)){
+                            this.setStatut("finie");
+                            return plateau[i][j];
+                        }
+                    }
+                    else if(i<=2 && j<3){
                         if(droite(i, j, plateau[i][j],1)){
                             this.setStatut("finie");
                             return plateau[i][j];

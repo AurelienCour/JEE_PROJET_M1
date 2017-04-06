@@ -14,8 +14,8 @@
         if(reset!=null){
             jeu.initialisation();
         }
-        int win = jeu.vainqueur();
         
+        int win = jeu.vainqueur();
         if(jeu.statut() == "finie" && win != 0){
             %><h1>FINI LE VAINQUEUR EST LE <%=win%></h1><%
         }else if(jeu.statut() == "finie"){
@@ -34,12 +34,9 @@
                     }
                 }
            }
-           else
-                out.println("Vous n'avez pas encore rentré de valeur <br>");
         }
-        
         %>
-        <table>
+        <table class="grilleJeu">
             <%for (int line = 0; line<6; line++) {%>
             <tr>
                 <%for (int col = 0; col<7; col++) {%>
@@ -58,11 +55,11 @@
                 <%}
             }
             if(jeu.statut() == "finie"){
-            %>
-            <form method="get" action="jeu.jsp">
-                <input type="submit" value="RESET" name="B2" class="buttonTest">
-            </form>
-            <%
+                %>
+                <form method="get" action="jeu.jsp">
+                    <input type="submit" value="RESET" name="B2" class="boutonReset">
+                </form>
+                <%
             }%>
             </tr>
         </table>
