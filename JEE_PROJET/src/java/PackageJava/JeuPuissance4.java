@@ -136,11 +136,6 @@ public class JeuPuissance4 extends API{
         }
         return true;
     }
-
-    @Override
-    public int derniereAction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public void afficheTableu(){
         for (int[] is : plateau) {

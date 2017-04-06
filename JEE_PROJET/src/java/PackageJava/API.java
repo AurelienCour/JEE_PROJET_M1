@@ -53,7 +53,7 @@ public abstract class API {
      * Permet de renvoyer le joueur qui est en train de jouer ou si la partie est terminée
      * @return statut : "joueur1", "joueur2" ou "finie"
      */
-    String statut(){
+    public String statut(){
         return this.statut;
     }
     
@@ -69,7 +69,9 @@ public abstract class API {
      * Permet de renvoyer la dernière action qui a été effectué par le joueur
      * @return dernActionValide : numéro du coup
      */
-    abstract int derniereAction();
+    public int derniereAction(){
+        return this.dernActionValide;
+    }
     
     /**
      * Function affichage
