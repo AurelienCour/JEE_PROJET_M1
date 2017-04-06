@@ -21,6 +21,7 @@ public class TestAPI {
     public void setUp()
     {
         api = new Jeu();
+        api.Initialisation();
     }
     
     /**
@@ -33,23 +34,38 @@ public class TestAPI {
     
     @Test
     public void testInitialisation(){
-        Jeu.Initialisation();
-        assertEquals("joueur1",Jeu.statut());
-         assertEquals(0,Jeu.derniereAction());
+        assertEquals("joueur1",api.statut());
+        assertEquals(0,api.derniereAction());
     }
     
     @Test
-    public void testTableau(){
-        for (int i = 0; i < Jeu.getTab().length(); i++) {
-            assertEquals(Jeu.getTab()[i][0],api.action(Jeu.getTab()[i][1],Jeu.getTab()[i][2]));
-        }
+    public void testMauvaisJoueur(){
+        t   ; //t[1] à 3
+        assertEquals(t[0],api.action(t[1],t[2]));
     }
     
     @Test
-    public void testDerniereAction(){
-        if(api.action(x,y)){
-            assertEquals(action.getY(),api.derniereAction());
+    public void testChangementJoueur(){
+        t ; //pas de problème
+        api.action(t[1],t[2]);
+        assertEquals(t[2],api.dernierAction());
+        assertEquals("joueur 2", api.statut());    
+    }
+    
+    @Test
+    public void testMauvaisCoup(){
+        t ; //t[2] mauvais
+        assertEquals(t[0], api.action(t[1],t[2]));
+    }
+    
+    @Test
+    public void testFini() {
+        String s = "";
+        t ; //Faire un gros tableau
+        for(int j=0; j<t.length(); j++){
+            api.action(t[1],t[2]);  
         }
+        assertEquals("finie", api.statut(););
     }
     
 }
