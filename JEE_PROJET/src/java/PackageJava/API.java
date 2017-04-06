@@ -53,7 +53,9 @@ public abstract class API {
      * Permet de renvoyer le joueur qui est en train de jouer ou si la partie est terminée
      * @return statut : "joueur1", "joueur2" ou "finie"
      */
-    abstract String statut();
+    String statut(){
+        return this.statut;
+    }
     
     /**
      * Function vainqueur
