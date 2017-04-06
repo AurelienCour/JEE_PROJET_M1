@@ -1,6 +1,6 @@
 <%-- 
-    Document   : premierjsp
-    Created on : 6 avr. 2017, 09:07:10
+    Document   : delphine
+    Created on : 6 avr. 2017, 09:23:01
     Author     : Aurelien
 --%>
 
@@ -14,5 +14,4 @@
     <body>
         <h1>Hello World!</h1>
     </body>
-    test
 </html>
