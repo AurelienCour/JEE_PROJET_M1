@@ -85,6 +85,16 @@ public class JeuPuissance4 extends API{
         return 0;
     }
     
+    
+    public int getDerniereLigne(int colonne){
+        for (int i = 0; i <= 5; i++) {
+            if(plateau[i][colonne] != 0){
+                    return i;
+            }
+        }
+        return 5;
+    }
+    
     private boolean diagDroitBas(int ligne, int col, int joueur, int numbAlligne){
         if(numbAlligne == 4)
             return true;
