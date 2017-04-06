@@ -17,7 +17,7 @@ h1
 
 body
 {
-	background: url("Fond_noir.jpg"); 
+	background: url("../Image/Fond_noir.jpg"); 
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position:  center; 
